@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row header">
+        <div class="col-md-3 col-sm-12 col-lg-3 col-12 left-align logoSectionMenu vertical-center">
+            <img class="img-logo" src="{{ asset('assets/img/logo.png') }}" alt="">
+        </div>
+        <div class="col-md-9 col-sm-12 col-lg-9 col-12 buttonsSectionMenu vertical-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row info">
+        <div class="col-md-8 col-sm-8 col-lg-8 offset-md-2 offset-sm-2 offset-lg-2">
+            <h2>Lorem ipsum</h2>
+            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.</h3>
+            <button type="button" id="btnFindArticles" class="btn btn-primary mTFijo mBFijo">Primary</button>
+        </div>
+    </div>
+
+    <div class="row products">
+        <div class="col-md-8 col-sm-8 col-lg-8 offset-md-2 offset-sm-2 offset-lg-2">
+            <div id="root"></div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="{{ asset('assets/build/js/app.js') }}"></script>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $( "#btnFindArticles" ).click(function() {
+                findArticles()
+            });
+        });
+
+        function findArticles(){
+            $.ajax({
+                url: "{{ path('find_articles') }}",
+                success: function(respuesta){
+                    alert(respuesta);
+                }
+            });
+        }
+
+
+    </script>
+
+{% endblock %}

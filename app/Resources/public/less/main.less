@@ -1,0 +1,138 @@
+.header{
+  padding-left: 200px;
+  padding-right: 200px;
+  height: 80px;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .buttonsSectionMenu{
+    justify-content: flex-end;
+  }
+}
+.right-align{
+  text-align: right;
+}
+.left-align{
+  text-align: left;
+}
+.vertical-center{
+  display: flex;
+  align-items: center;
+}
+
+.img-logo{
+  max-height: 50px;
+}
+.info{
+  height: 400px;
+  background-color: black;
+  color: white;
+
+  button{
+    height: 50px;
+    width: 120px;
+  }
+
+  text-align: center;
+
+  h2{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 45px;
+  }
+  h3{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+}
+
+.mTFijo{
+  margin-top:10px
+}
+.mBFijo{
+  margin-bottom:20px;
+}
+
+.products{
+  padding-top: 25px;
+  background-color: lightgrey;
+  color: black;
+  text-align: center;
+
+  .divProduct{
+
+    .itemProduct{
+      padding: 10px;
+      .imageProduct{
+        width: 100%;
+        background-color: white;
+      }
+      .bodyProduct{
+        padding-top: 10px;
+        min-height: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: auto;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    .logoSectionMenu{
+      text-align: center !important;
+    }
+    .buttonsSectionMenu{
+      text-align: center !important;
+      padding-top: 10px;
+      justify-content: center;
+    }
+    .logoSectionMenu{
+      justify-content: center;
+      .img-logo{
+        height: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  .info {
+    height: auto;
+  }
+}
+
+// Mobile responsive
+@media (max-width: 500px) {
+  .logoSectionMenu{
+    .img-logo{
+      width: 100%;
+    }
+
+  }
+  .header {
+    .buttonsSectionMenu{
+      button{
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
